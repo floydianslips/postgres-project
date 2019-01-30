@@ -26,10 +26,8 @@ function getQuery (client, query, values, cb) {
   }
 
 function findByName (client, data) {
-  console.log(data)
   let query = "SELECT first_name, last_name FROM famous_people WHERE last_name=$1 OR first_name=$1";
   let values = [data];
-  console.log(values)
   getQuery(client, query, values, person  => console.log(`The famous person with that name is: ${famous_people.first_name} ${last_name}`));
 }
 
