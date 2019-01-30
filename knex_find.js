@@ -12,4 +12,4 @@ orWhere('last_name', '=', args)
   console.log("The famous person is: " + rowData.first_name + rowData.last_name + ", whose birthday is: " + rowData.birthdate.toString().slice(0, 15))
   knex.destroy();
   // rows.forEach()
-})
+});
