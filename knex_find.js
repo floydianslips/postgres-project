@@ -9,7 +9,7 @@ where('first_name', '=', args).
 orWhere('last_name', '=', args)
 .asCallback(function(err, rows){
   let rowData = rows[0];
-  console.log("The famous person is: " + rowData.first_name + " " + rowData.last_name + ", whose birthday is: " + rowData.birthdate.toString().slice(0, 15))
+  console.log("The famous person is: " + rowData.first_name + rowData.last_name + ", whose birthday is: " + rowData.birthdate.toString().slice(0, 15))
   knex.destroy();
-});
-
+  // rows.forEach()
+})
